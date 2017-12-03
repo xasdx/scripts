@@ -32,8 +32,10 @@ class HttpPing
   end
 end
 
-HttpPing.new([
-  "http://www.google.com",
-  "https://www.twitch.tv",
-  "https://www.youtube.com"
-]).ping_parallel
+if __FILE__==$0
+  HttpPing.new([
+    "http://www.google.com",
+    "https://www.twitch.tv",
+    "https://www.youtube.com"
+  ]).ping_parallel
+end
